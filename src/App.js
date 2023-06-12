@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ColumnTable from "./column-table/ColumnTable";
+import ColumnTable2 from "./column-table/ColumnTable2";
+import { MOCK_DATA } from "./MOCK_DATA";
 
 function App() {
+  const response = MOCK_DATA;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ColumnTable data={response} />
+      <ColumnTable2 data={response} />
     </div>
   );
 }
